@@ -93,7 +93,7 @@ public class CarritoController {
         }
 
         LocalDateTime now = LocalDateTime.now();
-
+        ordenFinal.setEstado("Atendida");
         ordenFinal.setTime(now);
         //guardo orden en base de datos
         serviceOrden.save(ordenFinal);

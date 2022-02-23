@@ -19,7 +19,7 @@ public class Orden {
     private long idOrden;
     private String mail;
     List<OrdenItem> itemsOrden = new ArrayList<>();
-    private String estado;
+    private String estado= "Generada";
     private  LocalDateTime time;
 
     public void addItem(OrdenItem item){
