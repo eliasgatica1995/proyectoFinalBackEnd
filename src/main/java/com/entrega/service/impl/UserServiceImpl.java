@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
         UserBuilder.requestToDocument(request);
         var user = repository.save(UserBuilder.requestToDocument(request));
         enviar.sendEmail("Se ha creado el usuario con nombre: "+request.getUsername()+
-                        "con mail "+request.getEmail()
+                        " con mail "+request.getEmail()
                 ,"Creacion de usuario "+request.getEmail());
 
         return UserBuilder.documentToResponse(user);
